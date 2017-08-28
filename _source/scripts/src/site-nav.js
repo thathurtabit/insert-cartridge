@@ -2,7 +2,7 @@
 	/*jshint undef:false*/
 	'use strict';
 
-	var ACTIVE_CLASS = 'header--nav-open';
+	var ACTIVE_CLASS = 'header--nav-openYOYO';
 	var elSiteHeader;
 	var elHeaderNav;
 

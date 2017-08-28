@@ -6,10 +6,13 @@
   "scripts": {
     "start": "localhost ./public/",
     "test": "mocha",
-		"add": "git add public && git commit -m 'gh page deploy'",
-		"deploy": "git subtree push --prefix public origin gh-pages"
+    "add": "git add public && git commit -m 'gh page deploy'",
+    "deploy": "git subtree push --prefix public origin gh-pages"
   },
-	"pre-commit": ["add", "deploy"],
+  "pre-commit": [
+    "add",
+    "deploy"
+  ],
   "dependencies": {
     "del": "^3.0.0",
     "gulp": "^3.8.11",
@@ -17,12 +20,16 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "barba.js": "^1.0.0",
+    "browserify": "^14.4.0",
     "cartridge-copy-assets": "^2.0.1",
     "cartridge-images": "^1.0.0",
     "cartridge-javascript": "^1.0.0",
     "cartridge-local-server": "^0.3.0",
     "cartridge-sass": "^2.2.2",
     "cartridge-static-html": "^1.1.0",
-    "localhost": "^0.2.2"
+    "localhost": "^0.2.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

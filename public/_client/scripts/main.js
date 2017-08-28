@@ -1,1 +1,164 @@
-!function(e,t){"use strict";var n=n||{};new(n=function(){function e(){var e=document.createElement("link");e.rel="stylesheet",e.href="https://fonts.googleapis.com/css?family=Lato:300,900",document.head.appendChild(e)}e()})}(window),function(e,t){"use strict";document.body.classList.remove("no-js"),document.body.classList.add("js")}(window),function(e,t){"use strict";function n(e,t){var n=!1;return n=e.classList?e.classList.contains(t):new RegExp("(^| )"+t+"( |$)","gi").test(e.className)}function o(){return e.innerWidth<768}function r(){return y.querySelectorAll(".header-nav-list")[0].offsetHeight}function i(){y.setAttribute("style","height: "+r()+"px")}function c(){i(),v.classList.add(p)}function s(){y.removeAttribute("style"),v.classList.remove(p)}function a(){var e=n(v,p);e===!0?s():c()}function u(e){e.preventDefault(),a()}function l(){var e=document.querySelectorAll("[data-menu-toggle]")[0];e.addEventListener("click",u)}function d(){var e=document.querySelectorAll("[data-menu-toggle]")[0];e.removeEventListener("click",u),s()}function f(){v=document.querySelectorAll("[data-site-header]")[0],y=document.querySelectorAll("[data-header-nav]")[0],o()?l():d()}function m(e){setTimeout(e,500)}function w(){m(function(){f(),n(v,p)&&i()})}var v,y,p="header--nav-open";f(),e.addEventListener("resize",w)}(window),function(e,t,n){"use strict";function o(){return"undefined"!=typeof Promise&&Promise.toString().indexOf("[native code]")!==-1}function r(){c[0].classList.add("show-commands")}function i(){o()?u.startTyping():r()}var c=document.querySelectorAll("[data-typewriter]"),s={selector:"[data-typewriter]",rowSelector:"[data-typewriter-row]",contentSelector:"[data-typewriter-content]",loop:!0,letterSpeed:150},a=document.querySelectorAll(s.selector)[0],u=new t(s);n.addElement(a,i),n.init()}(window,window.Typewriter,window.Scroller);
+(function(window, undefined) {
+	/*jshint undef:false*/
+	'use strict';
+
+	var barba = require('barba.js');
+
+	document.body.classList.add('BROWSERIFY-GO');
+
+})(window);
+
+(function(window, undefined) {
+	/*jshint undef:false*/
+	'use strict';
+
+	var LazyFonts = LazyFonts || {};
+
+	LazyFonts = function() {
+
+		function init() {
+			var lato = document.createElement('link');
+            lato.rel = 'stylesheet';
+            lato.href = 'https://fonts.googleapis.com/css?family=Lato:300,900';
+			document.head.appendChild(lato);
+		}
+
+		init();
+	};
+
+	new LazyFonts();
+
+})(window);
+
+(function(window, undefined) {
+	/*jshint undef:false*/
+	'use strict';
+
+	document.body.classList.remove('no-js');
+	document.body.classList.add('js');
+
+})(window);
+
+(function(window, undefined) {
+	/*jshint undef:false*/
+	'use strict';
+
+	var ACTIVE_CLASS = 'header--nav-openYOYO';
+	var elSiteHeader;
+	var elHeaderNav;
+
+	// Regex is to support ie9
+	function hasClass(el, className) {
+		var boolean = false;
+		el.classList ? boolean = el.classList.contains(className) : boolean = new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className); // jshint ignore:line
+
+		return boolean;
+	}
+
+	function isWindowInScope() {
+		return window.innerWidth < 768;
+	}
+
+	function getNavHeight() {
+		return elHeaderNav.querySelectorAll('.header-nav-list')[0].offsetHeight;
+	}
+
+	function setNavHeight() {
+		elHeaderNav.setAttribute('style', 'height: ' + getNavHeight() + 'px');
+	}
+
+	function showNav() {
+		setNavHeight();
+		elSiteHeader.classList.add(ACTIVE_CLASS);
+	}
+
+	function hideNav() {
+		elHeaderNav.removeAttribute('style');
+		elSiteHeader.classList.remove(ACTIVE_CLASS);
+	}
+
+	function toggleNav() {
+		var isNavOpen = hasClass(elSiteHeader, ACTIVE_CLASS);
+		isNavOpen === true ? hideNav() : showNav(); // jshint ignore:line
+	}
+
+	function handleClickEvent(event) {
+		event.preventDefault();
+		toggleNav();
+	}
+
+	function bindEvents() {
+		var elMenuToggle = document.querySelectorAll('[data-menu-toggle]')[0];
+		elMenuToggle.addEventListener('click', handleClickEvent);
+	}
+
+	function reset() {
+		var elMenuToggle = document.querySelectorAll('[data-menu-toggle]')[0];
+		elMenuToggle.removeEventListener('click', handleClickEvent);
+		hideNav();
+	}
+
+	function init() {
+		elSiteHeader = document.querySelectorAll('[data-site-header]')[0];
+		elHeaderNav = document.querySelectorAll('[data-header-nav]')[0];
+
+		if(isWindowInScope()) {
+			bindEvents();
+		} else {
+			reset();
+		}
+	}
+
+	function debouceHandler(callback) {
+		setTimeout(callback, 500);
+	}
+
+	function handleResize() {
+		debouceHandler(function() {
+			init();
+			if(hasClass(elSiteHeader, ACTIVE_CLASS)) setNavHeight(); // jshint ignore:line
+		});
+	}
+
+	init();
+
+	window.addEventListener('resize', handleResize);
+
+})(window);
+
+(function(window, Typewriter, Scroller) {
+	/*jshint undef:false*/
+	'use strict';
+
+	var elTypewriter = document.querySelectorAll('[data-typewriter]');
+
+	var options = {
+		selector: '[data-typewriter]',
+		rowSelector: '[data-typewriter-row]',
+		contentSelector: '[data-typewriter-content]',
+		loop: true,
+		letterSpeed: 150
+	};
+
+	var elTerminal = document.querySelectorAll(options.selector)[0];
+
+	var terminal = new Typewriter(options);
+
+	function supportsPromises() {
+		return typeof Promise !== 'undefined' && Promise.toString().indexOf('[native code]') !== -1; // jshint ignore:line
+	}
+
+	function fallback() {
+		elTypewriter[0].classList.add('show-commands');
+	}
+
+	function init() {
+		supportsPromises() ? terminal.startTyping() : fallback(); // jshint ignore:line
+	}
+
+	Scroller.addElement(elTerminal, init);
+	Scroller.init();
+
+})(window, window.Typewriter, window.Scroller);
+
+//# sourceMappingURL=main.js.map
