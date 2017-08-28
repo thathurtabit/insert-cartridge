@@ -11,16 +11,16 @@
   },
 	"pre-commit": ["add", "deploy"],
   "dependencies": {
-    "del": "^2.1.0",
+    "del": "^3.0.0",
     "gulp": "^3.8.11",
-    "run-sequence": "^1.1.0",
-    "yargs": "^3.18.0"
+    "run-sequence": "^2.1.0",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
-    "cartridge-copy-assets": "^1.0.0",
+    "cartridge-copy-assets": "^2.0.1",
     "cartridge-images": "^1.0.0",
     "cartridge-javascript": "^1.0.0",
-    "cartridge-local-server": "^0.2.1",
+    "cartridge-local-server": "^0.3.0",
     "cartridge-sass": "^2.2.2",
     "cartridge-static-html": "^1.1.0",
     "localhost": "^0.2.2"

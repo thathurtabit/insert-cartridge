@@ -22,7 +22,7 @@
     },
     {
       "name": "cartridge-copy-assets",
-      "version": "1.0.0",
+      "version": "2.0.1",
       "site": "https://github.com/cartridge/cartridge-copy-assets",
       "task": "cartridge-copy-assets/task.js"
     },
@@ -34,7 +34,7 @@
     },
     {
       "name": "cartridge-local-server",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "site": "https://github.com/cartridge/cartridge-local-server",
       "task": "cartridge-local-server/task.js"
     }

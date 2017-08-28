@@ -35,7 +35,7 @@ The following Cartridge modules are used in this project
 [//]: <> (Modules start)
 Module | Version | Repo
 ------ | ------- | -----
-cartridge-static-html | 1.3.0 | https://github.com/cartridge/cartridge-static-htmlcartridge-sass | 2.4.1 | https://github.com/cartridge/cartridge-sasscartridge-javascript | 1.0.0 | https://github.com/cartridge/cartridge-javascriptcartridge-copy-assets | 1.0.0 | https://github.com/cartridge/cartridge-copy-assetscartridge-images | 1.0.0 | https://github.com/cartridge/cartridge-imagescartridge-local-server | 0.2.2 | https://github.com/cartridge/cartridge-local-server
+cartridge-static-html | 1.3.0 | https://github.com/cartridge/cartridge-static-htmlcartridge-sass | 2.4.1 | https://github.com/cartridge/cartridge-sasscartridge-javascript | 1.0.0 | https://github.com/cartridge/cartridge-javascriptcartridge-copy-assets | 2.0.1 | https://github.com/cartridge/cartridge-copy-assetscartridge-images | 1.0.0 | https://github.com/cartridge/cartridge-imagescartridge-local-server | 0.3.0 | https://github.com/cartridge/cartridge-local-server
 [//]: <> (Modules end)
 
 ### Adding modules
