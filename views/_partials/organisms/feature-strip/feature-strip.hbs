@@ -1,0 +1,10 @@
+<article class="feature-strip">
+	{{> molecules/section-intro/section-intro introText}}
+	<div class="grid grid--3">
+		{{#each featureItems}}
+		<div class="grid__column">
+			{{> molecules/feature-item/feature-item this}}
+		</div>
+		{{/each}}
+	</div>
+</article>

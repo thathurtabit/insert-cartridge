@@ -1,0 +1,102 @@
+// Atoms - Terminal
+
+$c-red: #c4371b;
+$c-yellow: #f3c700;
+$c-green: #01b058;
+
+.terminal {
+	display: block;
+	margin-bottom: $row-divider;
+	text-align: left;
+}
+
+// Header bar
+.terminal__header {
+	background: getColor(tertiary);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	height: $row-divider * 1.5;
+}
+
+.terminal__header-option {
+	border-radius: 50%;
+	display: inline-block;
+	height: 12px;
+	margin: $row-divider / 2 $row-divider / 6;
+	width: 12px;
+
+	&:first-child {
+		margin-left: $row-divider / 2;
+	}
+
+	&--close {
+		background-color: $c-red;
+	}
+
+	&--shrink {
+		background-color: $c-yellow;
+	}
+
+	&--expand {
+		background-color: $c-green;
+	}
+}
+
+.terminal__list {
+	background: getColor(highlight);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	list-style: none;
+	margin: 0;
+	padding: $row-divider $row-divider / 2;
+
+	@include min-width($B-Tablet-Small) {
+		padding: $row-divider;
+	}
+}
+
+.terminal__item {
+	margin-bottom: $row-divider;
+	visibility: visible;
+}
+
+.terminal__text {
+	color: getColor(white);
+
+	&--command-blue {
+		color: getColor(secondary);
+		display: block;
+
+		@include min-width($B-Tablet-Small) {
+			display: inline-block;
+		}
+	}
+
+	&--command-standout {
+		color: getColor(standout);
+	}
+
+	@include min-width($B-Tablet-Small) {
+		display: inline-block;
+	}
+}
+
+[data-typewriter-visible='true'],
+[data-typewriter-visible] {
+	visibility: visible;
+}
+
+[data-typewriter-visible='false'] {
+	visibility: hidden;
+
+	.no-js & {
+		visibility: visible;
+	}
+}
+
+// Nojs
+.no-js [data-typewriter-content] {
+	&::before {
+		content: attr(data-typewriter-content);
+	}
+}

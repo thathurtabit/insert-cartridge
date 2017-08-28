@@ -1,0 +1,37 @@
+// Common Sass functions
+
+@function getColor($colour) {
+	@if (map-has-keyif($Colours, $colour)) {
+		@return map-get($Colours, $colour);
+	}
+
+	@warn 'Unable to find colour';
+}
+
+@function calculaterem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+@function remify($px) {
+	@if $px == 0 {
+		@return 0;
+	}
+
+	@if type-of(px) == 'number' {
+		@return calculaterem($px);
+	}
+
+	@else {
+		$rems: ();
+
+		@each $value in $px {
+			@if $value == 0 {
+				$rems: append($rems, $value);
+			} @else {
+				$rems: append($rems, calculaterem($value));
+			}
+		}
+		@return $rems;
+	}
+}

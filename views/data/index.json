@@ -1,0 +1,14 @@
+{
+    "landing": {
+        "head": {
+            "title": "Test",
+            "description": "test description",
+            "canonical": "",
+            "twitter": {
+                "card": "Test image name",
+                "site": "@cartridge",
+                "url": "/"
+            }
+        }
+    }
+}

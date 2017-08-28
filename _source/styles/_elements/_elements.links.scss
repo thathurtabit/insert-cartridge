@@ -1,0 +1,58 @@
+// Links - styles for links
+
+@mixin Generic-Link() {
+	color: getColor(secondary);
+	font-size: $F-Generic-Size;
+	font-weight: 300;
+	line-height: $F-Line-Height;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+	}
+}
+
+@mixin ButtonStyle($bg, $colour) {
+	background-color: getColor($bg);
+	color: getColor($colour);
+	transition: all ease-in 0.2s;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken(getColor($bg), 10%);
+		text-decoration: none;
+	}
+}
+
+@mixin GenericButton() {
+	@include ButtonStyle(tertiary, black);
+	display: inline-block;
+	font-family: $F-Family;
+	font-weight: bold;
+	margin: $row-divider / 2;
+	padding: $row-divider * 0.75 $row-divider * 1.5;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+a {
+	@include Generic-Link();
+}
+
+.btn {
+	@include Generic-Link();
+	@include GenericButton();
+
+	&--primary {
+		@include ButtonStyle(primary, white);
+	}
+
+	&--secondary {
+		@include ButtonStyle(secondary, white);
+	}
+}

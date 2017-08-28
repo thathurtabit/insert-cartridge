@@ -1,0 +1,28 @@
+{
+  "name": "cartridge-website",
+  "version": "0.0.1",
+  "description": "Website for Cartridge.",
+  "license": "ISC",
+  "scripts": {
+    "start": "localhost ./public/",
+    "test": "mocha",
+		"add": "git add public && git commit -m 'gh page deploy'",
+		"deploy": "git subtree push --prefix public origin gh-pages"
+  },
+	"pre-commit": ["add", "deploy"],
+  "dependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.8.11",
+    "run-sequence": "^1.1.0",
+    "yargs": "^3.18.0"
+  },
+  "devDependencies": {
+    "cartridge-copy-assets": "^1.0.0",
+    "cartridge-images": "^1.0.0",
+    "cartridge-javascript": "^1.0.0",
+    "cartridge-local-server": "^0.2.1",
+    "cartridge-sass": "^2.2.2",
+    "cartridge-static-html": "^1.1.0",
+    "localhost": "^0.2.2"
+  }
+}

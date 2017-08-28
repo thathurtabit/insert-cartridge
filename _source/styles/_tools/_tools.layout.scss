@@ -1,0 +1,11 @@
+// Layout
+
+@mixin container {
+	margin: 0 auto;
+	padding: $row-divider ($row-divider / 2);
+	width: 100%;
+
+	@include min-width($B-Tablet-Large) {
+		max-width: 1024px;
+	}
+}

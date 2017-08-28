@@ -1,0 +1,19 @@
+// Logo
+
+.logo {
+	background: url('../images/svgs/cartridge-logo.svg') no-repeat 0 0;
+	display: inline-block;
+	height: 48px;
+	text-indent: -9999px;
+	width: 183px;
+
+	&--big {
+		background: url('../images/svgs/cartridge-logo-big.svg') no-repeat center;
+		height: 150px;
+		width: 250px;
+
+		@include min-width($B-Tablet-Medium) {
+			height: 200px;
+		}
+	}
+}

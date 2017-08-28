@@ -1,0 +1,84 @@
+// Common Sass mixins
+
+@mixin clearfix($important: false) {
+	// Determine whether or not to make declarations important.
+	@if ($important == false) {
+		$important: null;
+	} @else {
+		$important: !important;
+	}
+
+	&::after {
+		clear: both $important;
+		content: '' $important;
+		display: table $important;
+	}
+}
+
+// Required vendor prefixes for font rendering
+// stylelint-disable
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+// stylelint-enable
+
+@mixin hide-content {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin min-width($breakpoint) {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin min-max-width($breakpoint, $breakpoint2) {
+	@media screen and (min-width: $breakpoint) and (max-width: $breakpoint2) {
+		@content;
+	}
+}
+
+@mixin max-width($breakpoint) {
+	@media screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin landscape() {
+	@media (max-width: $B-Tablet-Medium) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin old-ie8-scaled-svg($d-px-target) {
+	@if $old-ie-8 {
+		font-size: 1rem;
+		zoom: ($d-px-target/$d-px);
+	}
+}
+
+// Required prefixes for placeholder attribute
+// stylelint-disable
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+
+	:-moz-placeholder {
+		@content;
+	}
+
+	::-moz-placeholder {
+		@content;
+	}
+
+	:-ms-input-placeholder {
+		@content;
+	}
+}
+// stylelint-enable

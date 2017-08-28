@@ -1,0 +1,9 @@
+// Atoms - Code snippet
+
+.code-snippet {
+	background: getColor(highlight);
+	border-radius: $row-divider / 4;
+	color: getColor(white);
+	display: inline-block;
+	padding: $row-divider / 4 $row-divider / 2;
+}

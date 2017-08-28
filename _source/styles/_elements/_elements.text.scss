@@ -1,0 +1,22 @@
+// Text
+body {
+	font-family: $F-Family;
+	font-size: $F-Generic-Size;
+	font-weight: 300;
+	line-height: $F-Line-Height;
+}
+
+p {
+	margin-bottom: $row-divider;
+
+	@include min-width($B-Tablet-Small) {
+		max-width: 35em;
+	}
+}
+
+.keyword {
+	background-color: getColor(highlight);
+	color: getColor(white);
+	font-size: $F-Generic-Size * 0.8;
+	padding: $row-divider / 4;
+}

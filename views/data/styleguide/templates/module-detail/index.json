@@ -1,0 +1,104 @@
+{
+	"moduleTemplate": {
+		"head": {
+            "title": "Test",
+            "description": "test description",
+            "canonical": "",
+            "twitter": {
+                "card": "Test image name",
+                "site": "@cartridge",
+                "url": "/"
+            }
+        },
+		"banner": {
+			"title": "Modules"
+		},
+		"sectionIntro": {
+			"heading": "Example Heading",
+			"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+		},
+		"sectionOutro": {
+			"heading": "Example Heading",
+			"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"button": {
+				"text": "Check out our Github page",
+				"url": "#",
+				"buttonType": "btn--primary"
+			}
+		},
+		"modules": {
+			"modules": {
+				"item": [
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					}
+				]
+			}
+		},
+		"instructions": {
+			"fromScratch": {
+				"title": "Getting started from scratch",
+				"listItem": [
+					{
+						"text": "This is how instruction text would look.",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					},
+					{
+						"text": "Using a simple ordered list",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					}
+				]
+			},
+			"addingToCurrent": {
+				"title": "Adding to a current Cartridge project",
+				"listItem": [
+					{
+						"text": "This is how instruction text would look.",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					},
+					{
+						"text": "Using a simple ordered list",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					}
+				]
+			}
+		},
+		"siteFooter": {
+			"footerLink": [
+				{
+					"href": "/styleguide",
+					"text": "Getting Started"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Modules"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Github"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Twitter"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Code Computerlove"
+				}
+			]
+		}
+	}
+}

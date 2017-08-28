@@ -1,0 +1,199 @@
+{
+    "styleguide": {
+        "head": {
+            "className": "styleguide",
+            "title": "Test",
+            "description": "test description",
+            "canonical": "",
+            "twitter": {
+                "card": "Test image name",
+                "site": "@cartridge",
+                "url": "/"
+            }
+        },
+        "buttons": [
+            {
+                "href": "/styleguide",
+                "buttonType": "btn--primary",
+                "text": "Primary Button"
+            },
+            {
+                "href": "/styleguide",
+                "buttonType": "btn--secondary",
+                "text": "Secondary Button"
+            },
+            {
+                "href": "/styleguide",
+                "buttonType": "",
+                "text": "Tertiary Button"
+            }
+        ],
+        "colourBlock": [
+            {
+               "colour": "primary",
+               "hex": "#d5033e",
+               "name": "Primary"
+            },
+            {
+               "colour": "secondary",
+               "hex": "#0095ff",
+               "name": "Secondary"
+            },
+            {
+               "colour": "tertiary",
+               "hex": "#d5033e",
+               "name": "Tertiary"
+            },
+            {
+               "colour": "standout",
+               "hex": "#d9e608",
+               "name": "Stand Out"
+            },
+            {
+               "colour": "highlight",
+               "hex": "#2a3d51",
+               "name": "Highlight"
+            }
+        ],
+        "molecules": {
+            "banner": {
+                "title": "A Frontend static site generator to help you quickly setup a new project",
+                "button": {
+                    "href": "/styleguide",
+                    "buttonType": "btn--primary",
+                    "text": "Get Started"
+                }
+            },
+			"featureItem": {
+				"icon": {
+					"name": "cog"
+				},
+				"heading": "Feature Item Heading",
+				"text": "This is a feature item content item. It uses the icon, heading and text atom."
+			},
+			"sectionIntro": {
+				"heading": "Section Intro",
+				"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+				"button": {
+					"href": "/styleguide",
+                    "buttonType": "btn--primary",
+                    "text": "Get Started"
+				}
+			},
+			"modules": {
+				"item": [
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					}
+				]
+			},
+			"instructions": {
+				"title": "Styleguide instructions",
+				"listItem": [
+					{
+						"text": "This is how instruction text would look.",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					},
+					{
+						"text": "Using a simple ordered list",
+						"snippet": { "text": "npm i cartridge-cli -g" }
+					}
+				]
+			}
+        },
+		"organism": {
+			"modules": {
+				"introText": {
+					"heading": "Modules",
+					"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+				},
+				"modules": {
+					"item": [
+						{
+							"name": "cartridge-sass",
+							"href": "/modules/cartride-sass/"
+						},
+						{
+							"name": "cartridge-sass",
+							"href": "/modules/cartride-sass/"
+						},
+						{
+							"name": "cartridge-sass",
+							"href": "/modules/cartride-sass/"
+						},
+						{
+							"name": "cartridge-sass",
+							"href": "/modules/cartride-sass/"
+						}
+					]
+				}
+			},
+			"featureStrip": {
+				"introText": {
+					"heading": "What is Cartridge?",
+					"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+				},
+				"featureItems": [
+					{
+						"icon": {
+							"name": "cog"
+						},
+						"heading": "Pre-configured",
+						"text": "This is a feature item content item. It uses the icon, heading and text atom."
+					},
+					{
+						"icon": {
+							"name": "fast"
+						},
+						"heading": "Speedy Setup",
+						"text": "This is a feature item content item. It uses the icon, heading and text atom."
+					},
+					{
+						"icon": {
+							"name": "bug"
+						},
+						"heading": "Well Tested",
+						"text": "This is a feature item content item. It uses the icon, heading and text atom."
+					}
+				]
+			},
+			"siteFooter": {
+				"footerLink": [
+					{
+						"href": "/styleguide",
+						"text": "Getting Started"
+					},
+					{
+						"href": "/styleguide",
+						"text": "Modules"
+					},
+					{
+						"href": "/styleguide",
+						"text": "Github"
+					},
+					{
+						"href": "/styleguide",
+						"text": "Twitter"
+					},
+					{
+						"href": "/styleguide",
+						"text": "Code Computerlove"
+					}
+				]
+			}
+		}
+    }
+}

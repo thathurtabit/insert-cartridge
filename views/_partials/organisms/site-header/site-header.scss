@@ -1,0 +1,176 @@
+// Site-Header
+
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px $row-divider / 2;
+	background: getColor(secondary);
+
+	@include min-width($B-Tablet-Medium) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+}
+
+.header__wrapper {
+	@include container();
+	padding: 0;
+	position: relative;
+
+	@include max-width($B-Tablet-Medium) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+}
+
+// Header navigation
+
+.header-nav {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	visibility: hidden;
+
+	@include min-width($B-Tablet-Medium) {
+		display: inline-block;
+		height: auto;
+		float: right;
+		position: relative;
+		top: $row-divider / 2;
+		visibility: visible;
+	}
+
+	// height will be controlled in js and fallback to display on no-js
+	.header--nav-open &,
+	.no-js & {
+		visibility: visible;
+
+		@include min-max-width($B-Mobile-Large, $B-Tablet-Medium) {
+			margin-bottom: $row-divider;
+		}
+	}
+
+	.no-js & {
+		height: auto;
+	}
+
+	@include max-width($B-Mobile-Large) {
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	@include max-width($B-Tablet-Medium) {
+		margin-top: $row-divider;
+	}
+}
+
+.header-nav-list {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.header-nav__item {
+	display: block;
+	transition: margin $transition;
+
+	@include max-width($B-Mobile-Large) {
+		padding: $row-divider / 2 $row-divider;
+	}
+
+	@include min-width($B-Mobile-Large) {
+		display: inline-block;
+		margin-left: 1.5em; // 24px/16px
+	}
+
+	@include min-width($B-Tablet-Large) {
+		margin-left: 2.25em; // 36px/16px
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.header-nav__item__link {
+	@include font-smoothing;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: getColor(white);
+	transition: color $transition;
+
+	&:hover {
+		text-decoration: none;
+		color: getColor(standout);
+	}
+}
+
+// Mobile toggle
+
+.menu-toggle {
+	display: inline-block;
+	float: right;
+	height: 14px;
+	line-height: 10px;
+	position: absolute;
+	right: $row-divider;
+	top: $row-divider / 1.2;
+
+	@include min-width($B-Tablet-Medium) {
+		display: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.no-js & {
+		display: none;
+	}
+}
+
+.menu-toggle__label {
+	@include hide-content;
+}
+
+.menu-toggle__burger {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background: getColor(white);
+	transition: background $transition-duration $transition-easing;
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: getColor(white);
+		transition: transform $transition-duration $transition-easing, opacity $transition-duration $transition-easing;
+	}
+
+	&::before {
+		transform: translateY(-6px);
+	}
+
+	&::after {
+		transform: translateY(6px);
+	}
+
+	.header--nav-open & {
+		background: transparent;
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+}

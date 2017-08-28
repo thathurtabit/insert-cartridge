@@ -1,0 +1,92 @@
+{{> header styleguide.head}}
+    <main class="wrapper">
+        <section class="grid">
+            <div class="grid__row">
+                <h2 class="styleguide__counter">Atoms</h2>
+            </div>
+            {{> styleguide/colour}}
+            {{> styleguide/logo}}
+            {{> styleguide/fonts}}
+            {{> styleguide/typograpghy}}
+            {{> styleguide/layout}}
+            {{> styleguide/buttons}}
+            {{> styleguide/icons}}
+        </section>
+        <section class="grid">
+                <h2 class="styleguide__counter">Molecules</h2>
+				<div class="grid__row styleguide__section">
+					<h3>Banner</h3>
+					{{> molecules/banner/banner styleguide.molecules.banner}}
+				</div>
+
+			<div class="grid__row styleguide__section">
+				<h3>Feature Item</h3>
+				<p>The component is used on the landing page. It displays full width unless you add it within a grid container.</p>
+				{{> molecules/feature-item/feature-item styleguide.molecules.featureItem}}
+            </div>
+
+			<div class="grid__row styleguide__section">
+				<h3>Instructions</h3>
+				{{> molecules/instructions/instructions styleguide.molecules.instructions}}
+            </div>
+
+			<div class="grid__row styleguide__section">
+				<h3>Section Intro</h3>
+				<p>The component is a common component. It displays full width unless you add it within a grid container. The use for this component would be as an intro to a section element.</p>
+				{{> molecules/section-intro/section-intro styleguide.molecules.sectionIntro}}
+            </div>
+
+			<div class="grid__row styleguide__section">
+				<h3>Module Item</h3>
+				<p>The component is a common component. It is used within the <a href="#organism-modules">Modules organism</a>.</p>
+				{{> molecules/module-item/module-item styleguide.molecules.modules}}
+            </div>
+
+        </section>
+        <section class="grid">
+            <div class="grid__row">
+                <h2 class="styleguide__counter">Organisms</h2>
+            </div>
+			<div class="grid__row styleguide__section">
+				<h3>Site Header</h3>
+				{{> organisms/site-header/site-header}}
+			</div>
+			<div class="grid__row styleguide__section">
+				<h3>Site Footer</h3>
+				{{> organisms/site-footer/site-footer styleguide.organism.siteFooter}}
+			</div>
+			<div class="grid__row styleguide__section">
+				<h3>Modules</h3>
+				{{> organisms/modules/modules styleguide.organism.modules}}
+			</div>
+			<div class="grid__row styleguide__section">
+				<h3>Feature Strip</h3>
+				{{> organisms/feature-strip/feature-strip styleguide.organism.featureStrip}}
+			</div>
+			<div class="grid__row styleguide__section">
+				<h3>Terminal</h3>
+				{{> organisms/getting-started/getting-started}}
+			</div>
+        </section>
+        <section class="grid">
+            <div class="grid__row">
+                <h2 class="styleguide__counter">Templates</h2>
+				<div>
+					<a href="/styleguide/templates/landing">Landing Template</a>
+				</div>
+				<div>
+					<a href="/styleguide/templates/listing">Listing Template</a>
+				</div>
+				<div>
+					<a href="/styleguide/templates/module-detail">Module Detail Template</a>
+				</div>
+            </div>
+        </section>
+        <section class="grid">
+            <div class="grid__row">
+                <h2 class="styleguide__counter">Pages</h2>
+            </div>
+        </section>
+    </main>
+
+{{> footer }}

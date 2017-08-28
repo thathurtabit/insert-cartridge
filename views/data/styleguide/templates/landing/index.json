@@ -1,0 +1,115 @@
+{
+	"landingTemplateData": {
+		"head": {
+            "title": "Test",
+            "description": "test description",
+            "canonical": "",
+            "twitter": {
+                "card": "Test image name",
+                "site": "@cartridge",
+                "url": "/"
+            }
+        },
+		"banner": {
+			"title": "A Frontend static site generator to help you quickly setup a new project",
+			"button": {
+				"href": "/styleguide",
+				"buttonType": "btn--primary",
+				"text": "Get Started"
+			}
+		},
+		"featureStrip": {
+			"introText": {
+				"heading": "What is Cartridge?",
+				"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+			},
+			"featureItems": [
+				{
+					"icon": {
+						"name": "cog"
+					},
+					"heading": "Pre-configured",
+					"text": "This is a feature item content item. It uses the icon, heading and text atom."
+				},
+				{
+					"icon": {
+						"name": "fast"
+					},
+					"heading": "Speedy Setup",
+					"text": "This is a feature item content item. It uses the icon, heading and text atom."
+				},
+				{
+					"icon": {
+						"name": "bug"
+					},
+					"heading": "Well Tested",
+					"text": "This is a feature item content item. It uses the icon, heading and text atom."
+				}
+			]
+		},
+		"gettingStarted": {
+			"sectionIntro": {
+				"heading": "Getting Started",
+				"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+			},
+			"sectionOutro": {
+				"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+				"button": {
+					"text": "View our Github",
+					"url": "#",
+					"buttonType": "btn--primary"
+				}
+			}
+		},
+		"modules": {
+			"introText": {
+				"heading": "Modules",
+				"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+			},
+			"modules": {
+				"item": [
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					},
+					{
+						"name": "cartridge-sass",
+						"href": "/modules/cartride-sass/"
+					}
+				]
+			}
+		},
+		"siteFooter": {
+			"footerLink": [
+				{
+					"href": "/styleguide",
+					"text": "Getting Started"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Modules"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Github"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Twitter"
+				},
+				{
+					"href": "/styleguide",
+					"text": "Code Computerlove"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<div class="grid__row styleguide__section">
+    <h3>Colour Scheme</h3>
+        <div class="grid grid--4">
+            {{#each styleguide.colourBlock}}
+            <div class="grid__column">
+                <p class="styleguide__colour-block styleguide__colour-block--{{colour}}">
+                    <span class="styleguide__advantage-bold">{{name}}</span>
+                    {{hex}}
+                </p>
+            </div>
+            {{/each}}
+    </div>
+</div>

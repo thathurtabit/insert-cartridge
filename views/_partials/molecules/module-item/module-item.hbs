@@ -1,0 +1,18 @@
+<ul class="modules">
+	{{#each item}}
+
+	<li class="modules__item">
+		<a href="{{href}}" class="modules__circle">
+			<span class="modules__content">
+				{{> atoms/icon/icon name="cartridge"}}
+				{{name}}
+			</span>
+		</a>
+	</li>
+
+	{{/each}}
+</ul>
+
+{{#if goToModules}}
+	<a href="/modules/" class="modules__link">View Modules</a>
+{{/if}}

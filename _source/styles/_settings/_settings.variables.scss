@@ -1,0 +1,11 @@
+// Global variables
+
+$fix-mqs: 							false !default;
+$row-divider: 						20px !default;
+
+// Transitions
+
+$transition-duration: 0.2s;
+$transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+$transition: $transition-duration $transition-easing;

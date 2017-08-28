@@ -1,0 +1,16 @@
+<article class="instructions">
+	<h3 class="h3 instructions__heading">{{title}}</h3>
+	<ol class="instructions__list">
+		{{#each listItem}}
+		<li class="instructions__list-item">
+			{{text}}
+
+			{{#if snippet}}
+			<div class="instructions__code-snippet">
+				{{> atoms/code-snippet/code-snippet snippet}}
+			</div>
+			{{/if}}
+		</li>
+		{{/each}}
+	</ol>
+</article>

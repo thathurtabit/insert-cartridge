@@ -1,0 +1,15 @@
+// Molecules - Feature Item
+
+.feature-item {
+	display: block;
+	padding: 0 $row-divider;
+	text-align: center;
+
+	.icon {
+		margin-bottom: $row-divider * 0.75;
+	}
+}
+
+.feature-item__text {
+	max-width: 100%;
+}

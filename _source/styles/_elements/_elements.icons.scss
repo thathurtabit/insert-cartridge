@@ -1,0 +1,14 @@
+// Icons
+
+.icon {
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	width: 50px;
+
+	@each $icon, $bg in $Icons {
+		&--#{$icon} {
+			background: url($bg) no-repeat;
+		}
+	}
+}

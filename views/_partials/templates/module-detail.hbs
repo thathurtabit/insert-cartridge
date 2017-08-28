@@ -1,0 +1,25 @@
+{{> organisms/site-header/site-header header}}
+<main>
+	{{> molecules/banner/banner banner}}
+	<article>
+		<div class="container">
+			{{> molecules/section-intro/section-intro sectionIntro}}
+		</div>
+		<div class="container">
+			<div class="grid grid--2">
+				<div class="grid__column">
+					{{> molecules/instructions/instructions instructions.fromScratch}}
+				</div>
+				<div class="grid__column">
+					{{> molecules/instructions/instructions instructions.addingToCurrent}}
+				</div>
+			</div>
+		</div>
+		{{> organisms/modules/modules modules}}
+		<div class="container">
+			{{> molecules/section-outro/section-outro sectionOutro}}
+		</div>
+	</article>
+</main>
+{{> organisms/site-footer/site-footer siteFooter}}
+

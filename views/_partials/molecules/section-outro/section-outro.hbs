@@ -1,0 +1,14 @@
+<footer class="section-intro">
+	{{#if heading}}
+	<h2 class="section-intro__heading">
+		{{heading}}
+	</h2>
+	{{/if}}
+	<p>
+		{{text}}
+	</p>
+
+	{{#if button}}
+		{{> atoms/buttons-link/buttons-link button}}
+	{{/if}}
+</footer>

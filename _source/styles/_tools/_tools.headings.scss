@@ -1,0 +1,44 @@
+// MIXIN Headings
+
+@mixin Generic-Heading() {
+	font-family: $F-Family;
+	font-weight: bold;
+	line-height: $F-Line-Height;
+	margin-bottom: $row-divider;
+}
+
+@mixin h1() {
+	font-size: $F-h2;
+
+	@include min-width($B-Tablet-Small) {
+		font-size: $F-h1;
+	}
+}
+
+@mixin h2() {
+	font-size: $F-h3;
+
+	@include min-width($B-Tablet-Small) {
+		font-size: $F-h2;
+	}
+}
+
+@mixin h3() {
+	font-size: $F-h4;
+
+	@include min-width($B-Tablet-Small) {
+		font-size: $F-h3;
+	}
+}
+
+@mixin h4() {
+	font-size: $F-h5;
+
+	@include min-width($B-Tablet-Small) {
+		font-size: $F-h4;
+	}
+}
+
+@mixin h5() {
+	font-size: $F-h5;
+}

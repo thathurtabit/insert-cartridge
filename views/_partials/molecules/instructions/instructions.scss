@@ -1,0 +1,24 @@
+// Molecules - Instructions
+
+.instructions {
+	border-radius: $row-divider / 4;
+	background: getColor(tertiary);
+	padding: $row-divider / 2;
+	text-align: center;
+}
+
+.instructions__list {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 30em;
+	padding: 0;
+}
+
+.instructions__list-item {
+	display: block;
+	margin-top: $row-divider;
+}
+
+.instructions__code-snippet {
+	margin: $row-divider auto;
+}

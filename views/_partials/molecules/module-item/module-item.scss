@@ -1,0 +1,85 @@
+// Molecules - Module Item
+
+.modules {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+
+	.icon {
+		display: block;
+		margin: $row-divider / 2 auto;
+	}
+}
+
+.modules__item {
+	padding: $row-divider;
+	width: 100%;
+
+	@include min-width($B-Mobile-Large) {
+		width: 50%;
+	}
+
+	@include min-width($B-Tablet-Small) {
+		width: 33%;
+	}
+
+	@include min-width($B-Tablet-Medium) {
+		width: 25%;
+	}
+}
+
+.modules__circle {
+	background: getColor(white);
+	border: 2px solid getColor(black);
+	border-radius: 50%;
+	display: inline-block;
+	height: 160px;
+	position: relative;
+	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.5, 1.275);
+	width: 160px;
+
+	@include min-width($B-Mobile) {
+		height: calc(480px / 2);
+		width: calc(480px / 2);
+	}
+
+	@include min-width($B-Mobile-Large) {
+		height: calc(320px / 2);
+		width: calc(320px / 2);
+	}
+
+	@include min-width($B-Tablet-Large) {
+		height: calc(768px / 4);
+		width: calc(768px / 4);
+	}
+
+	.modules__wrapper & {
+		border: 0;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0;
+		transform: scale(0.9);
+	}
+}
+
+.modules__content {
+	color: getColor(black);
+	left: 0;
+	padding: 0 $row-divider;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}

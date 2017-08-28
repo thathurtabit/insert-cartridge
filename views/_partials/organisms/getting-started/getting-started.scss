@@ -1,0 +1,10 @@
+// Organisms getting started
+
+.getting-started__wrapper {
+	@include container();
+	text-align: center;
+
+	p {
+		margin: $row-divider auto;
+	}
+}

@@ -1,0 +1,12 @@
+<div class="grid__row styleguide__section">
+    <h3>Buttons</h3>
+    <p>
+        The markup for button links are very simple. To use the default button use <span class="keyword">.btn</span> to style the buttons
+        and we use <span class="keyword">.btn--primary/secondary</span> to specify what type of button. 
+    </p>
+
+    {{#each styleguide.buttons}}
+        {{> atoms/buttons-link/buttons-link this}}
+    {{/each}}
+
+</div>
